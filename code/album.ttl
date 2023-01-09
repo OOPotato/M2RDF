@@ -1,0 +1,206 @@
+@prefix : <http://www.semanticweb.org/bole8/ontologies/2022/11/album#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/bole8/ontologies/2022/11/album> .
+
+<http://www.semanticweb.org/bole8/ontologies/2022/11/album> rdf:type owl:Ontology ;
+                                                             rdfs:comment "C'est un ontology sur album"@fr .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#nommé
+:nommé rdf:type owl:ObjectProperty ;
+       rdfs:domain :AlbumPhoto ;
+       rdfs:range :Title ;
+       rdfs:comment "AlbumPhoto nommé Title"@fr .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#ou
+:ou rdf:type owl:ObjectProperty ;
+    rdfs:domain :AlbumPhoto ;
+    rdfs:range :Lieu ;
+    rdfs:comment "AlbumPhoto ou Lieu"@fr .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#pour
+:pour rdf:type owl:ObjectProperty ;
+      rdfs:domain :AlbumPhoto ;
+      rdfs:range :Type ;
+      rdfs:comment "AlbumPhoto pour Type"@fr .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#propriétaire
+:propriétaire rdf:type owl:ObjectProperty ;
+              rdfs:domain :AlbumPhoto ;
+              rdfs:range :Auteur ;
+              rdfs:comment "AlbumPhoto propriétaire Auteur"@fr .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#quand
+:quand rdf:type owl:ObjectProperty ;
+       rdfs:domain :AlbumPhoto ;
+       rdfs:range :Date ;
+       rdfs:comment "AlbumPhoto quand Date"@fr .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#qui
+:qui rdf:type owl:ObjectProperty ;
+     rdfs:domain :AlbumPhoto ;
+     rdfs:range :Personne ;
+     rdfs:comment "AlbumPhoto qui Personne"@fr .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#quoi
+:quoi rdf:type owl:ObjectProperty ;
+      rdfs:domain :AlbumPhoto ;
+      rdfs:range :Objet ;
+      rdfs:comment "AlbumPhoto quoi obget"@fr .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#AuteurPhoto
+:AuteurPhoto rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Auteur ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#ObjetPhoto
+:ObjetPhoto rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Objet ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#PersonneDansPhoto
+:PersonneDansPhoto rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Personne ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#PrendrePhotoDate
+:PrendrePhotoDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Date ;
+                  rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#PrendrePhotoLieu
+:PrendrePhotoLieu rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Lieu ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#TitlePhoto
+:TitlePhoto rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Title ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#TypePhoto
+:TypePhoto rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Type ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#AlbumPhoto
+:AlbumPhoto rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#Auteur
+:Auteur rdf:type owl:Class ;
+        rdfs:subClassOf :AlbumPhoto .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#Date
+:Date rdf:type owl:Class ;
+      rdfs:subClassOf :AlbumPhoto .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#Lieu
+:Lieu rdf:type owl:Class ;
+      rdfs:subClassOf :AlbumPhoto .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#Objet
+:Objet rdf:type owl:Class ;
+       rdfs:subClassOf :AlbumPhoto .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#Personne
+:Personne rdf:type owl:Class ;
+          rdfs:subClassOf :AlbumPhoto .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#Title
+:Title rdf:type owl:Class ;
+       rdfs:subClassOf :AlbumPhoto .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#Type
+:Type rdf:type owl:Class ;
+      rdfs:subClassOf :AlbumPhoto .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#img1
+:img1 rdf:type owl:NamedIndividual ,
+               :AlbumPhoto ;
+      :AuteurPhoto "Tom"^^xsd:string ;
+      :ObjetPhoto "La Tour Eiffel"^^xsd:string ;
+      :PersonneDansPhoto "Janne"^^xsd:string ;
+      :PrendrePhotoDate "2022-12-24T09:30:00"^^xsd:dateTime ;
+      :PrendrePhotoLieu "France"^^xsd:string ;
+      :TitlePhoto "Janne à la tour eiffel"^^xsd:string ;
+      :TypePhoto "Vacance"^^xsd:string .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#img2
+:img2 rdf:type owl:NamedIndividual ,
+               :AlbumPhoto ;
+      :AuteurPhoto "Bob"^^xsd:string ;
+      :ObjetPhoto "chien"^^xsd:string ;
+      :PersonneDansPhoto "Alice"^^xsd:string ;
+      :PrendrePhotoDate "2022-11-30T12:23:30"^^xsd:dateTime ;
+      :PrendrePhotoLieu "Paris"^^xsd:string ;
+      :TitlePhoto "Alice joue avec un chien"^^xsd:string ;
+      :TypePhoto "vie"^^xsd:string .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#img3
+:img3 rdf:type owl:NamedIndividual ,
+               :AlbumPhoto ;
+      :AuteurPhoto "Bob"^^xsd:string ;
+      :ObjetPhoto "iphone"^^xsd:normalizedString ;
+      :PersonneDansPhoto "Bob"^^xsd:string ;
+      :PrendrePhotoDate "2023-01-03T12:23:34"^^xsd:dateTime ;
+      :PrendrePhotoLieu "France"^^xsd:string ;
+      :TitlePhoto "Bob buy a iphone"^^xsd:string ;
+      :TypePhoto "vie"^^xsd:string .
+
+
+###  http://www.semanticweb.org/bole8/ontologies/2022/11/album#img4
+:img4 rdf:type owl:NamedIndividual ,
+               :AlbumPhoto ;
+      :AuteurPhoto "Alice"^^xsd:string ;
+      :ObjetPhoto "mer"^^xsd:string ;
+      :PersonneDansPhoto "Alice"^^xsd:string ;
+      :PrendrePhotoDate "2021-11-10T08:30:23"^^xsd:dateTime ;
+      :PrendrePhotoLieu "La rochelle"^^xsd:string ;
+      :TitlePhoto "vacance a larochelle"^^xsd:string ;
+      :TypePhoto "vancance"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
