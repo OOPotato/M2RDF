@@ -1,3 +1,7 @@
+# Auteurs
+
+Tom Priore et Zhenyu Liu
+
 # liste de requêtes SPARQL
 
 #### Toutes les photos de Bob
